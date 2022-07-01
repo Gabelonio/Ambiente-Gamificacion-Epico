@@ -119,11 +119,9 @@ export default function NavBar(props) {
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                     {pages.map((page) =>{ 
                         const dir="/"+page.replace(/ /g, "");
-                        console.log(dir);
                         return(
-                            <NavLink className='link' to={dir}>
+                            <NavLink key={page} className='link' to={dir}>
                             <Button
-                                key={page}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >

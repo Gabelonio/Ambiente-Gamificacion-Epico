@@ -1,0 +1,39 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    align-items: center;
+    grid-gap: 10px;
+    padding-top: 5em;
+    padding-right: 100px;
+}
+
+.text{
+    padding-top: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: left;
+}
+
+
+.imagen{
+    
+    text-align: center;
+    width: 500px;
+    height: 350px;
+    border-color: black;
+    border-style: groove;
+    border-radius: 10px;
+}
+
+.bt_home{
+    background-color:rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    border:0ch; 
+    width: 80px;
+    height: 30px;
+}
+.bt_home:hover{
+    background-color:rgba(0, 0, 0, 0.751);
+}
