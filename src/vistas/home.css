@@ -37,3 +37,10 @@
 .bt_home:hover{
     background-color:rgba(0, 0, 0, 0.751);
 }
+
+
+.imagen img{
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+}
