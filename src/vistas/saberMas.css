@@ -1,17 +1,18 @@
 .saberMas_contenedor{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     justify-items: center;
     align-items: center;
     grid-column-gap: 10px;
     grid-row-gap: 80px;
     padding-top: 5em;
-    padding-right: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
     
 }
 
 .sm_text{
-    width:300px;
+    width:400px;
     height: 300px;
 }
 
@@ -36,8 +37,6 @@ img{
 }
 .sm_title div{
     width: 100%;
-    font-family: 'Inter';
-    font-style: normal;
     text-align: center;
 }
 .sm_title div h1{
@@ -50,4 +49,33 @@ img{
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.2px;
+}
+
+@media (max-width: 600px) {
+    .sm_img{
+        width: 100vw;
+        height: auto;
+    }
+    .saberMas_contenedor{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .sm_text{
+        width: 100vw;
+        height: auto;
+    }
+    .sm_title{
+        height: auto;
+        padding-bottom: 0px;
+    }
+    .sm_title div h1{
+        font-weight: 400;
+        font-size: 40px;
+    }
+    .sm_title div p{
+        font-weight: 300;
+        font-size: 15px;
+    }
 }

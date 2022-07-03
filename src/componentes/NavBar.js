@@ -130,10 +130,6 @@ export default function NavBar(props) {
                         </NavLink>
                     )} )}
                 </Box>
-
-                <Box sx={{ flexGrow: 0 }}>
-                    <Button variant="contained">Contained</Button>
-                </Box>
                 </Toolbar>
             </Container>
         </AppBar>
