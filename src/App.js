@@ -16,13 +16,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar/>
-        <Routes>
-          <Route  path='/'    element={<Home/>}  />
-          <Route  path='/Testimonios'    element={<Testimonios/>}  />
-          <Route  path='/Preguntas'    element={<Preguntas/>}  />
-          <Route  path='/SaberMas'    element={<SaberMas/>}  />
-          <Route  path='*'  element={<h1> pagina no encontrada</h1>} />
-        </Routes>
+      <Routes>
+        <Route  path='/'    element={<Home/>}  />
+        <Route  path='/Testimonios'    element={<Testimonios/>}  />
+        <Route  path='/Preguntas'    element={<Preguntas/>}  />
+        <Route  path='/SaberMas'    element={<SaberMas/>}  />
+        <Route  path='*'  element={<h1> pagina no encontrada</h1>} />
+      </Routes>
     </BrowserRouter>
   );
 }
