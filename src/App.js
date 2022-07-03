@@ -1,6 +1,6 @@
 import './App.css';
 import * as React from 'react';
-import NavBar from './componentes/NavBar';
+import NavBar from './componentes/navBar/NavBar';
 
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -8,7 +8,7 @@ import Testimonios from './vistas/Testimonios';
 import Preguntas from './vistas/Preguntas';
 import Home from './vistas/Home';
 import SaberMas from './vistas/SaberMas';
-import Footer1 from './componentes/Footer1';
+import Footer1 from './componentes/footer1/Footer1';
 
 
 
