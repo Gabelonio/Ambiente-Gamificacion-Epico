@@ -1,9 +1,10 @@
-.contenedor_pregunta p{
+.pregunta{
     padding: 10px;
-
     display: flex;
     justify-content: space-between;
 }
+
+
 
 .contenedor_pregunta{
     background: white;
@@ -32,7 +33,7 @@
 
 .contenedor_pregunta.activa .respuesta{
 
-    max-width: auto;
+    max-height: auto;
     opacity: 1;
     transition: .3s ease all;
 }

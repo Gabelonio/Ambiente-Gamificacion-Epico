@@ -17,7 +17,6 @@ export default function Preguntas(props) {
                     return <Pregunta  key={data.pregunta}  pregunta={data.pregunta} respuesta={data.respuesta}/>
                 })}
             </div>
-            
         </div>
     )
 }
