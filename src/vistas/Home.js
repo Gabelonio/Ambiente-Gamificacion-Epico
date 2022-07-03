@@ -9,9 +9,8 @@ export default function Home(){
                 <button className='bt_home'>Unete</button>
             </div>
             <div  className="imagen">
-            <h1>img</h1>
+             <img alt='Img de presenatcion' src='https://www.pandasecurity.com/es/mediacenter/src/uploads/2020/07/pandasecurity-juegos-online.jpg'/>
             </div>
-            
         </div>
     )
 }
