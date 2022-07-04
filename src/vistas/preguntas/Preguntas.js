@@ -1,6 +1,6 @@
 import './preguntas.css';
-import Pregunta from '../componentes/pregunta/Pregunta';
-import data from '../data_prueba/faq.json';
+import Pregunta from '../../componentes/pregunta/Pregunta';
+import data from '../../data_prueba/faq.json';
 
 
 export default function Preguntas(props) {

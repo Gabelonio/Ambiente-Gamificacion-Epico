@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const pages = ['Saber Mas', 'Testimonios', 'Preguntas'];
+const pages = ['Saber Mas', 'login', 'Preguntas'];
 
 const theme = createTheme({
   status: {
