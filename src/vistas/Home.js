@@ -1,9 +1,15 @@
+import Aos from 'aos';
+import { useEffect } from 'react';
 import './home.css';
 
 export default function Home(){
 
+    useEffect(() => {
+        Aos.init({duration : 1000});
+      }, []);
+
     return(
-        <div className="contenedor" data-aos = "fade-right">
+        <div className="contenedor" data-aos = "fade-right" data-aos-once="true">
             <div className="text" >
                 <h1>Una nueva manera de conectar con alumnos</h1>
                 <button className='bt_home'>Unete</button>

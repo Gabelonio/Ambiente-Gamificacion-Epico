@@ -12,7 +12,7 @@ export default function Preguntas(props) {
       }, []);
     
     return(
-        <div data-aos = "fade-in">
+        <div data-aos = "fade-in" data-aos-once="true">
             <div className="pr_title" >
                 <h1>FAQ</h1>
                 <p>¿Tienes alguna duda? Aquí se encuentran las preguntas más 

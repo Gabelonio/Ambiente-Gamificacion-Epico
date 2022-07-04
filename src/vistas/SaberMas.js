@@ -11,7 +11,7 @@ export default function SaberMas(props) {
 
     return(
         <div>
-            <div className='sm_title' data-aos = "fade-in">
+            <div className='sm_title' data-aos = "fade-in" data-aos-once="true">
                 <div>
                     <h1> Promueve la motivación <br/>en el aprendizaje.</h1>
                 </div>
