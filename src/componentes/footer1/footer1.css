@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Maven+Pro:wght@600&display=swap');
 
 .footer1{
-    padding-top: 100px;
+    margin-top: 10em;
+    padding-top: 10px;
+    background-color: #6d9550;
 }
 
 .footer1_1{
@@ -48,10 +51,17 @@ hr {
     font-family: Montserrat;
     font-size: 0.82rem;
     margin: 3px;
+    color : #ffffff;
+}
+
+.info h3{
+    font-family: 'Maven Pro', cursive;
 }
 
 .info p{
     font-size: 0.7rem;
+    font-family: 'Maven Pro', cursive;
+    color : #e2e2e2;
 }
 
 
@@ -62,15 +72,20 @@ hr {
 }
 
 .footer1_2 p{
-    color: black;
+    color : #ffffff;
     padding-left: 110px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-family: 'Maven Pro', cursive;
 }
 
 .footer1_2 i{
     color: black;
     padding-top: 8px;
     padding-left: 6px;
+}
+
+.copyright p{
+    
 }
 
 @media (max-width: 380px) {
