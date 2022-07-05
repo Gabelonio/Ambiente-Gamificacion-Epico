@@ -1,7 +1,6 @@
 import React from 'react'
 import './navBar.css';
-import {NavLink} from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -16,17 +15,11 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const pages = ['Saber Mas', 'Preguntas'];
+const pagesVistaCompleta = [{nombre : 'Saber Mas', enlace : 'SaberMas'}, {nombre : 'Preguntas', enlace : 'Preguntas'}];
+const pagesVistaReducida = [...pagesVistaCompleta, {nombre : 'Inicia Sesion', enlace : 'login'}, {nombre : 'Inscribete', enlace : 'registro'}];
 
 const theme = createTheme({
-  status: {
-    danger: '#e53e3e',
-  },
   palette: {
-    primary: {
-        main: '#0971f1',
-        darker: '#053e85',
-    },
     login: {
         main: '#007233',
         dark: '#309672',
@@ -58,6 +51,10 @@ export default function NavBar(props) {
 
     function navigateToLogin(){
         navigate('/login');
+    }
+
+    function navigateToSignup(){
+        navigate('/registro');
     }
 
     return(
@@ -114,25 +111,24 @@ export default function NavBar(props) {
                                     display: { xs: 'block', md: 'none' }
                                 }}
                             >
-                                {pages.map((page) => {
-                                    const dir="/"+page.replace(/ /g, "");
+                                {pagesVistaReducida.map((page) => {
+                                    const dir="/"+page.enlace;
                                     return(
                                     <MenuItem  
-                                        key={page} onClick={handleCloseNavMenu} 
+                                        key={page.nombre} onClick={handleCloseNavMenu} 
                                         className = "navigationOptions">
                                         <NavLink className='link' to={dir} >
-                                            <Typography textAlign="center" sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} >{page}</Typography>
+                                            <Typography textAlign="center" sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} > {page.nombre} </Typography>
                                         </NavLink>
                                     </MenuItem>
                                 )})}
-                            </Menu>{/* Barra Navegacion en Vista Reducida*/}
+                            </Menu>{/* Barra de navegacion en Vista Reducida*/}
                         </Box>
-                        {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-                        {/* <NavLink className='link' to='/'>
+                        <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                        <NavLink className='link' to='/'>
                             <Typography
                                 variant="h5"
                                 noWrap
-                                component="a"
                                 href=""
                                 sx={{
                                 mr: 2,
@@ -147,31 +143,36 @@ export default function NavBar(props) {
                             >
                                 LOGO
                             </Typography>
-                        </NavLink>  */} {/* Display en Vista pequeña del titulo y logo */}
+                        </NavLink> {/* Display en Vista pequeña del titulo y logo */}
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {pages.map((page) =>{ 
-                                const dir="/"+page.replace(/ /g, "");
+                            {pagesVistaCompleta.map((page) =>{ 
+                                const dir="/"+page.enlace;
                                 return(
-                                <NavLink key={page} className='link' to={dir}>
+                                <NavLink key={page.nombre} className='link' to={dir}>
                                     <Button
                                         onClick={handleCloseNavMenu}
                                         className = "navigationOptions"
                                         sx={{ my: 2, color: 'white', display: 'block' , fontFamily: ['Maven Pro', 'cursive'].join(',')}}
                                     >
-                                        {page}
+                                        {page.nombre}
                                     </Button>
                                 </NavLink>
                             )} )}
                         </Box>{/* Barra de Navegacion en vista completa */}
 
-                        <Box sx={{flexGrow: 0}}>
+                        <Box sx={{flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
                             <ThemeProvider theme={theme}>
                                 <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(','),
-                                            marginRight: "1em" }} variant="contained" color = "login"
+                                            marginRight: "1em" }} 
+                                        variant="contained" 
+                                        color = "login"
                                         onClick = {navigateToLogin}>
                                     Inicia sesión
                                 </Button>
-                                <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} variant="contained" color = "signup">
+                                <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} 
+                                            variant="contained" 
+                                            color = "signup"
+                                            onClick = {navigateToSignup}>
                                     Inscríbete
                                 </Button>
                             </ThemeProvider>
