@@ -1,10 +1,31 @@
 import React from "react";
 import './login.css';
 import { useState } from 'react';
-import {NavLink} from 'react-router-dom';
+import { Link as RouterLink} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import { styled } from '@mui/material/styles';
+import { purple } from '@mui/material/colors';
+import { Button, Link } from "@mui/material";
+
+/* Estilos del boton "Entrar" */
+const ColorButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.getContrastText(purple[500]),
+    width: '144px',
+    height: '44px',
+    borderRadius: '10px',
+    backgroundColor: '#008080',
+    margin: 'auto',
+    marginTop: '45px',
+    fontFamily: "Sarabun, sans-serif",
+    '&:hover': {
+      backgroundColor: '#218c8c',
+    },
+}));
 
 export default function Login(props) {
 
+    const navigate = useNavigate();
     
     const[usuario, setusurio]=useState({
         email:'',
@@ -20,8 +41,13 @@ export default function Login(props) {
     }
 
     const comprobar=()=>{
-        console.log(usuario)
-    
+        console.log(usuario);
+        //Antes de entrar deberia comprobar el usuario
+        navigateToStudentView();
+    }
+
+    function navigateToStudentView(){
+        navigate('/Estudiante');
     }
 
     return(
@@ -32,8 +58,17 @@ export default function Login(props) {
                 <input type="email" name='email' value={usuario.email} onChange={handleChange} required></input>
                 <p>Contraseña</p>
                 <input type="password" name='pasword' value={usuario.pasword} onChange={handleChange} required></input>
-                <p className='crear'>¿No has creado una cuenta ? <NavLink to='/registro'>regístrate aquí</NavLink>.</p>
-                <div className='envio' onClick={comprobar}> <p>Entrar</p></div>
+                <p className='crear'>¿No has creado una cuenta?   
+                    <Link   to='/registro'
+                            underline="hover"
+                            component={RouterLink}
+                            sx={{fontFamily: ['Sarabun', 'sans-serif'].join(',')}}>regístrate aquí
+                    </Link>
+                </p>
+                <ColorButton variant="contained" 
+                             onClick={comprobar}>
+                                Entrar
+                </ColorButton>
             </div>
         </div>
     )

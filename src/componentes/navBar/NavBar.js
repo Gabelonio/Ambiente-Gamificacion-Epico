@@ -1,6 +1,7 @@
 import React from 'react'
 import './navBar.css';
 import {NavLink} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,7 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const pages = ['Saber Mas', 'login', 'Preguntas','Estudiante'];
+const pages = ['Saber Mas', 'Preguntas'];
 
 const theme = createTheme({
   status: {
@@ -42,7 +43,9 @@ const theme = createTheme({
 
 export default function NavBar(props) {
 
+    const navigate = useNavigate();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -52,6 +55,10 @@ export default function NavBar(props) {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
+
+    function navigateToLogin(){
+        navigate('/login');
+    }
 
     return(
         <div>
@@ -160,7 +167,8 @@ export default function NavBar(props) {
                         <Box sx={{flexGrow: 0}}>
                             <ThemeProvider theme={theme}>
                                 <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(','),
-                                            marginRight: "1em" }} variant="contained" color = "login">
+                                            marginRight: "1em" }} variant="contained" color = "login"
+                                        onClick = {navigateToLogin}>
                                     Inicia sesión
                                 </Button>
                                 <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} variant="contained" color = "signup">
