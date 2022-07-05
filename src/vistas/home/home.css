@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@600&display=swap');
+
 .contenedor{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -7,6 +9,10 @@
     padding-top: 5em;
     padding-right: 50px;
     padding-left: 50px;
+}
+
+.contenedor h1{
+    font-family: 'Sarabun', sans-serif;
 }
 
 .text{
@@ -34,6 +40,8 @@
     border:0ch; 
     width: 80px;
     height: 30px;
+    font-family: 'Sarabun', sans-serif;
+
 }
 .bt_home:hover{
     transition-duration: 0.35s;
