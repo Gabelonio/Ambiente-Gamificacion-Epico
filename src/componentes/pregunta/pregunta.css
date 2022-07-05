@@ -1,8 +1,10 @@
-.contenedor_pregunta p{
-    padding: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Maven+Pro:wght@600&display=swap');
 
+.pregunta{
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    font-family: 'Sarabun', sans-serif;
 }
 
 .contenedor_pregunta{
@@ -28,11 +30,16 @@
     max-height: 0px;
     opacity: 0;
     transition: .3s ease all;
+    color: #444444;
+    font-family: 'Sarabun', sans-serif;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: justify;
 }
 
 .contenedor_pregunta.activa .respuesta{
 
-    max-width: auto;
+    max-height: auto;
     opacity: 1;
     transition: .3s ease all;
 }
