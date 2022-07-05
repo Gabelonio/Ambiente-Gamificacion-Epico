@@ -2,7 +2,6 @@
 import './footer1.css';
 
 
-
 export default function Footer1(){
 
     return(

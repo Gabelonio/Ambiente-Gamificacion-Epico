@@ -1,0 +1,14 @@
+[
+    {
+        "nombre":"Matematicas 1",
+        "Profesor":"id del profesor"
+    },
+    {
+        "nombre":"Ingles 1",
+        "Profesor":"id del profesor"
+    },
+    {
+        "nombre":"Biologia 1",
+        "Profesor":"id del profesor"
+    }
+]

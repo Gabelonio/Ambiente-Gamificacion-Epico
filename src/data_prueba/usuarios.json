@@ -1,8 +1,8 @@
 [
     {
-        "nombres":"jordy Esteban",
-        "apellidos":"pineda velandia",
-        "tipo":"estudinate",
+        "nombre":"Jordy Esteban",
+        "apellido":"Pineda Velandia",
+        "tipo":"Estudinate",
         "clases":[1,2,3,4],
         "personaje":"Elfo"
     }
