@@ -13,6 +13,7 @@ import Footer1 from './componentes/footer1/Footer1';
 import Estudiante from './vistas/estudiante/Estudiante';
 import PerfilEst from './vistas/estudiante/PerfilEst';
 import ClasesEst from './vistas/estudiante/ClasesEst';
+import Registro from './vistas/registro/Registro';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route  path='/Preguntas'       element={<Preguntas/>}/>
           <Route  path='/SaberMas'        element={<SaberMas/>}/>
           <Route  path='/login'           element={<Login/>}/>
+          <Route  path='/registro'           element={<Registro/>}/>
           <Route  path='/Estudiante/*'    element={<Estudiante/>}>
             <Route  path='Micuenta'       element={<PerfilEst/>}/>  
             <Route  path='Clases'         element={<ClasesEst/>}/>  
