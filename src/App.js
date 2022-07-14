@@ -14,19 +14,27 @@ import Estudiante from './vistas/estudiante/Estudiante';
 import PerfilEst from './vistas/estudiante/PerfilEst';
 import ClasesEst from './vistas/estudiante/ClasesEst';
 
+const pages = ['Saber Mas', 'Preguntas'];
 
 function App() {
 
+  const [usuario, setUsuario] = React.useState(null);
+
+  const sesion= (persona)=> {
+    setUsuario(persona)
+    pages.push(persona[0].tipo)
+  }
+
   return (
     <BrowserRouter>
-      <NavBar/>
+     <NavBar usuario={usuario} pages={pages}/>
         <Routes>
           <Route  path='/'                element={<Home/>}/>
           <Route  path='/Testimonios'     element={<Testimonios/>}/>
           <Route  path='/Preguntas'       element={<Preguntas/>}/>
           <Route  path='/SaberMas'        element={<SaberMas/>}/>
-          <Route  path='/login'           element={<Login/>}/>
-          <Route  path='/Estudiante/*'    element={<Estudiante/>}>
+          <Route  path='/login'           element={<Login sesion={sesion} />}/>
+          <Route  path='/Estudiante/*'    element={<Estudiante  data={usuario} />}>
             <Route  path='Micuenta'       element={<PerfilEst/>}/>  
             <Route  path='Clases'         element={<ClasesEst/>}/>  
           </Route>

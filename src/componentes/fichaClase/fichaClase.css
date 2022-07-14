@@ -73,7 +73,7 @@
 }
 
 .fichaClase button:hover{
-    box-shadow:  3px 3px .5px #4d42a5;
+    box-shadow:  3px 3px 3px #4d42a5;
 }
 
 @media (max-width: 300px) {

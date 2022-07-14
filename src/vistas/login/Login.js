@@ -8,6 +8,9 @@ import { styled } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
 import { Button, Link } from "@mui/material";
 
+//data de prueba, debe llegar por get a la api rest
+import data from '../../data_prueba/usuarios.json';
+
 /* Estilos del boton "Entrar" */
 const ColorButton = styled(Button)(({ theme }) => ({
     color: theme.palette.getContrastText(purple[500]),
@@ -41,9 +44,16 @@ export default function Login(props) {
     }
 
     const comprobar=()=>{
-        console.log(usuario);
-        //Antes de entrar deberia comprobar el usuario
-        navigateToStudentView();
+    
+        //datos que se resiven por la api res
+        props.sesion(data)
+
+        if(data===null){
+            window.alert("Datos incorrectos");
+        }else{
+            navigateToStudentView();
+        }
+        
     }
 
     function navigateToStudentView(){

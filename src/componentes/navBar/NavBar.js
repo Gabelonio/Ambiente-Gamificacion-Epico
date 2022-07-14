@@ -16,7 +16,6 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const pages = ['Saber Mas', 'Preguntas'];
 
 const theme = createTheme({
   status: {
@@ -41,8 +40,9 @@ const theme = createTheme({
 });
 
 
-export default function NavBar(props) {
+export default function NavBar({usuario,pages}) {
 
+    
     const navigate = useNavigate();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -60,6 +60,26 @@ export default function NavBar(props) {
         navigate('/login');
     }
 
+    function sesion(){
+
+        if(usuario===null){
+            return(
+                <ThemeProvider theme={theme}>
+                    <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(','),
+                                marginRight: "1em" }} variant="contained" color = "login"
+                            onClick = {navigateToLogin}>
+                        Inicia sesión
+                    </Button>
+                    <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} variant="contained" color = "signup">
+                        Inscríbete
+                    </Button>
+                </ThemeProvider>
+            )
+        }
+
+    }
+
+    
     return(
         <div>
             <AppBar position="relative"  sx={{backgroundColor : "#7db952"}}>
@@ -165,16 +185,7 @@ export default function NavBar(props) {
                         </Box>{/* Barra de Navegacion en vista completa */}
 
                         <Box sx={{flexGrow: 0}}>
-                            <ThemeProvider theme={theme}>
-                                <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(','),
-                                            marginRight: "1em" }} variant="contained" color = "login"
-                                        onClick = {navigateToLogin}>
-                                    Inicia sesión
-                                </Button>
-                                <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} variant="contained" color = "signup">
-                                    Inscríbete
-                                </Button>
-                            </ThemeProvider>
+                            {sesion()}
                         </Box>
                     </Toolbar>
                 </Container>
