@@ -12,19 +12,19 @@
 
     gap: 5px;
     padding-top: 40px;
-    width: 250px;
+    width: 20vw;
     padding-bottom: 20px;
     background-color: var(--menuColor);
     overflow: hidden;
     
 }
-.opciones{
+.menu_izt .opciones{
     width: 240px;
     height: 40px;
     border-radius: 10px;
 }
-
-.opciones .link{
+ 
+.menu_izt .opciones .link{
 
     position: relative;
     left: 40px;
@@ -34,19 +34,19 @@
     
 }
 
-.opciones:hover, .opciones.activa{
+.menu_izt .opciones:hover, .opciones.activa{
     background-color: var(--menuOpcion);
     box-shadow:  6px 6px 3px teal;
     transition: .3s;
 }
 
 
-.resm_perfil{
+.menu_izt .resm_perfil{
     margin: auto;
     margin-bottom: 14px;
 }
 
-.resm_perfil p{
+.menu_izt .resm_perfil p{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -55,7 +55,53 @@
     margin: 0;
 }
 
-.img_perf{
+.menu_izt .img_perf{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px;
+    border-style: dashed;
+}
+
+ 
+.menu_izt .img_perf img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+.menu_despl_izq{
+    display:none;
+    background-color: var(--menuOpcion);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.menu_despl_izq .resm_perfil{
+    
+    margin-bottom: 14px;
+    margin: auto;
+
+}
+
+.menu_despl_izq .resm_perfil p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0;
+}
+
+.menu_despl_izq .img_perf{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -64,8 +110,59 @@
 }
 
 
-.img_perf img{
+.menu_despl_izq .img_perf img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+.menu_despl_izq .opciones{
+    width: 100vw;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.menu_despl_izq .opciones .link{
+    position: relative;
+    left: 40px;
+    top: 10px;
+    text-decoration: none;
+}
+
+.menu_despl_izq .opciones:hover, .opciones.activa{
+    background-color: var(--menuOpcion);
+    box-shadow:  6px 6px 3px teal;
+    transition: .3s;
+}
+
+.desplegar{
+    width: 100vw;
+    height: 50px;
+    background-color: var(--menuOpcion);
+}
+.desplegar i{
+    margin: 20px;
+}
+
+
+.esconder{
+    display: none;
+}
+
+.animacion_menu_izq{
+
+}
+
+
+@media (max-width: 904px) {
+
+    .contenedor_menu{
+        display:none !important;
+    }
+    .menu_despl_izq{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
 }

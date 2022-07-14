@@ -31,7 +31,9 @@ export default function SaberMas(props) {
                     Genera expectativas y objetivos que fomenten sus capacidades.</p>
                 </div>
                 <div  className="sm_img" data-aos = "fade-right" data-aos-once="true">
-                    <img alt='Img de presenatcion' src='https://www.pandasecurity.com/es/mediacenter/src/uploads/2020/07/pandasecurity-juegos-online.jpg'/>
+                    <img 
+                        alt='Img de presenatcion' 
+                        src='https://img.freepik.com/free-photo/video-maker-editor-working-digital-montage-creating-graphic-effects-computer-using-post-production-software-creativity-studio-agency-creator-editing-movie-footage-remote-work_482257-37969.jpg?t=st=1657051825~exp=1657052425~hmac=3d5185c138cd051dd71cc26b0e1e465fa9bf5ffe3c0b096d3ffac7b8b647b060&w=740'/>
                 </div>
                 <div className="sm_text" data-aos = "fade-left" data-aos-once="true">
                     <h1>Elige un personaje e inicia una experiencia alternativa de aprendizaje</h1>
@@ -40,7 +42,8 @@ export default function SaberMas(props) {
                         a tu personaje y realizar retos más desafiantes.</p>
                 </div>
                 <div  className="sm_img" data-aos = "fade-left" data-aos-once="true">
-                    <img alt='Img de presenatcion' src='https://www.pandasecurity.com/es/mediacenter/src/uploads/2020/07/pandasecurity-juegos-online.jpg'/>
+                    <img alt='Img de presenatcion' 
+                        src='https://img.freepik.com/free-photo/back-view-woman-winning-video-games-while-playing-late-night-she-has-powerful-pc-with-neon-fans-front_482257-29624.jpg?w=996&t=st=1657052753~exp=1657053353~hmac=0daad2c71bf8230d0fb0ec9cb74b4291ea5a01d8bed7c0bd0c7083d03ab77be6'/>
                 </div>
             </div>
         </div>

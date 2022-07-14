@@ -1,16 +1,22 @@
-import Ficha from '../../componentes/ficha/Ficha';
+
 import './clasesEst.css';
+
+import data from '../../data_prueba/clases.json'
+import FichaClase from '../../componentes/fichaClase/FichaClase'
 
 
 export default function ClasesEst(props){
 
-    const data=['Matematicas 1', "id_ de la clase?"]
-    return( <div>
+    return( <div className='clasesEst'>
+               <h1> Mis Clases</h1>
+               <hr></hr>
                <div className="misClases">
-                    <Ficha/>
+                    {data.map(item => { return <FichaClase key={item} clase={item}/>})}
                </div>
-
-               <div className="ingresarClase">buscar clase</div>
+               <hr></hr>
+               <div className="ingresarClase">
+                    <h1>busqueda de clases</h1>
+               </div>
             </div>)
-
+ 
 }
