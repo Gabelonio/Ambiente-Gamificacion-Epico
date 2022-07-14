@@ -13,9 +13,9 @@ export default function ClasesEst(props){
                <div className="misClases">
                     {data.map(item => { return <FichaClase key={item} clase={item}/>})}
                </div>
-               <hr></hr>
                <div className="ingresarClase">
-                    <h1>busqueda de clases</h1>
+                    <h1>Matricularme en una clase</h1>
+                    <hr></hr>
                </div>
             </div>)
  
