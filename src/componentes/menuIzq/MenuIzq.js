@@ -60,7 +60,7 @@ export default function MenuIzq({opciones, usuario}) {
                     </div>
                     {opciones.map(op=>{ 
                             const dir= op.replace(/ /g, "");
-                        return <div key={op} className='opciones' onClick={eleccion}>
+                        return <div key={op+'2'} className='opciones' onClick={eleccion}>
                                     <Link className='link' to={dir}>{op}</Link>
                                 </div>})}
                 </div>
