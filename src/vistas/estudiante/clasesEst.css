@@ -1,3 +1,41 @@
+:root{
+    --colorVerde:rgb(117, 245, 136);
+}
+
+.clasesEst{
+    margin: 10px;
+    margin-top: 1px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
 .misClases{
+
+
+    border-radius: 15px;
+    border: 2px solid rgb(120, 189, 133);
+    width: 73.4vw;
+    margin: 5px;
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+@media (max-width: 904px) {
+    .misClases{
+
+
+        border-radius: 15px;
+        width: 73.4vw;
+        margin: 1px;
+        padding: 5px;
+        background-color: aqua;
     
+        display: flex;
+        flex-flow: row wrap;
+    
+    }
 }

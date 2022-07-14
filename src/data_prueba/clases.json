@@ -1,14 +1,18 @@
 [
     {
         "nombre":"Matematicas 1",
-        "Profesor":"id del profesor"
+        "profesor":"Nombre profesor",
+        "id":"id de la clase"
+
     },
     {
         "nombre":"Ingles 1",
-        "Profesor":"id del profesor"
+        "profesor":"Nombre profesor",
+        "id":"id de la clase"
     },
     {
         "nombre":"Biologia 1",
-        "Profesor":"id del profesor"
+        "profesor":"Nombre profesor",
+        "id":"id de la clase"
     }
 ]
