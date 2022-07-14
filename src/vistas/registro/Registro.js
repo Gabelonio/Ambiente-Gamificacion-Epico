@@ -19,6 +19,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
   backgroundColor: "#008080",
   margin: "auto",
   marginTop: "45px",
+  display: "flex",
+  justifyContent: "center",
   fontFamily: "Sarabun, sans-serif",
   "&:hover": {
     backgroundColor: "#218c8c",
@@ -43,6 +45,11 @@ export default function Registro(props) {
     });
   };
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    comprobar();
+  }
+
   const comprobar = () => {
     console.log(usuario);
     //Antes de entrar deberia comprobar el usuario y determinar a donde debe navegar
@@ -61,7 +68,7 @@ export default function Registro(props) {
     <div data-aos="fade-down" data-aos-once="true">
       <div className="formulario">
         <h1 className="registro_title">Inscríbete</h1>
-        <form>
+        <form  onSubmit={handleSubmit}>
           <p>Nombre</p>
           <input
             type="text"
@@ -123,10 +130,10 @@ export default function Registro(props) {
               inicia sesión
             </Link>
           </p>
+          <ColorButton variant="contained" type="submit">
+            Inscríbete
+          </ColorButton>
         </form>
-        <ColorButton variant="contained" onClick={comprobar}>
-          Inscríbete
-        </ColorButton>
       </div>
     </div>
   );
