@@ -28,6 +28,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 }));
 
 export default function Login(props) {
+
   const navigate = useNavigate();
 
   const [usuario, setusurio] = useState({
@@ -45,12 +46,13 @@ export default function Login(props) {
   function handleSubmit(event) {
     event.preventDefault();
     comprobar();
+    props.stateSetter(true);
+    navigateToStudentView();
   }
 
   const comprobar = () => {
     console.log(usuario);
     //Antes de entrar deberia comprobar el usuario y determinar a donde debe navegar
-    navigateToStudentView();
   };
 
   function navigateToStudentView() {

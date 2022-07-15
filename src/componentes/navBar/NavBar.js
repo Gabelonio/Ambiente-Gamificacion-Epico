@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './navBar.css';
 import { useNavigate, NavLink } from 'react-router-dom';
 
@@ -40,14 +40,16 @@ export default function NavBar(props) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
 
+
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-        
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
+
+
 
     function navigateToLogin(){
         navigate('/login');
@@ -160,7 +162,7 @@ export default function NavBar(props) {
                             )} )}
                         </Box>{/* Barra de Navegacion en vista completa */}
 
-                        <Box sx={{flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+                        {!props.sesionIniciada && <Box sx={{flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
                             <ThemeProvider theme={theme}>
                                 <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(','),
                                             marginRight: "1em" }} 
@@ -176,7 +178,7 @@ export default function NavBar(props) {
                                     Inscríbete
                                 </Button>
                             </ThemeProvider>
-                        </Box>
+                        </Box>}
                     </Toolbar>
                 </Container>
             </AppBar>
