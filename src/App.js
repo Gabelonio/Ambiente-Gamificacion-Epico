@@ -14,21 +14,30 @@ import PerfilEst from "./vistas/estudiante/PerfilEst";
 import ClasesEst from "./vistas/estudiante/ClasesEst";
 import Registro from "./vistas/registro/Registro";
 
+const pages = ['Saber Mas', 'Preguntas'];
+
 function App() {
+
+  const [usuario, setUsuario] = React.useState(null);
+
+  const sesion= (persona)=> {
+    setUsuario(persona)
+    pages.push(persona[0].tipo)
+  }
 
   const [sesionIniciada, setSesionIniciada] = React.useState(false);
 
   return (
     <BrowserRouter>
-      <NavBar sesionIniciada = {sesionIniciada} />
+      <NavBar sesionIniciada = {sesionIniciada} usuario={usuario} pages={pages}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Testimonios" element={<Testimonios />} />
         <Route path="/Preguntas" element={<Preguntas />} />
         <Route path="/SaberMas" element={<SaberMas />} />
-        <Route path="/login"  element={<Login stateSetter = {setSesionIniciada}/>} />
-        <Route path="/registro" element={<Registro stateSetter = {setSesionIniciada}/>} />
-        <Route path="/Estudiante/*" element={<Estudiante />}>
+        <Route path="/login"  element={<Login sesion={sesion} setSesionIniciada = {setSesionIniciada}/>} />
+        <Route path="/registro" element={<Registro setSesionIniciada = {setSesionIniciada}/>} />
+        <Route  path='/Estudiante/*'    element={<Estudiante  data={usuario} />}>
           <Route path="Micuenta" element={<PerfilEst />} />
           <Route path="Clases" element={<ClasesEst />} />
         </Route>
