@@ -3,6 +3,8 @@ import './login.css';
 import { useState } from 'react';
 import { Link as RouterLink} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 import { styled } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
@@ -60,8 +62,12 @@ export default function Login(props) {
         navigate('/Estudiante');
     }
 
+    useEffect(() => {
+        Aos.init({duration : 1000});
+      }, []);
+
     return(
-        <div>
+        <div data-aos = "fade-down" data-aos-once="true">
             <div className="formulario">
                 <h1 className="login_title">Inicia sesión</h1>
                 <p>Email</p>

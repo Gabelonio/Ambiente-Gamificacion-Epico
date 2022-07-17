@@ -4,7 +4,6 @@ import NavBar from './componentes/navBar/NavBar';
 
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Testimonios from './vistas/Testimonios';
 import Preguntas from './vistas/preguntas/Preguntas';
 import Home from './vistas/home/Home';
 import SaberMas from './vistas/saberMas/SaberMas';
@@ -30,7 +29,6 @@ function App() {
      <NavBar usuario={usuario} pages={pages}/>
         <Routes>
           <Route  path='/'                element={<Home/>}/>
-          <Route  path='/Testimonios'     element={<Testimonios/>}/>
           <Route  path='/Preguntas'       element={<Preguntas/>}/>
           <Route  path='/SaberMas'        element={<SaberMas/>}/>
           <Route  path='/login'           element={<Login sesion={sesion} />}/>
