@@ -1,5 +1,5 @@
 import React from "react";
-import "./login.css";
+import "./registro.css";
 import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -10,10 +10,7 @@ import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
 import { Button, Link } from "@mui/material";
 
-//data de prueba, debe llegar por get a la api rest
-import data from '../../data_prueba/usuarios.json';
-
-/* Estilos del boton "Entrar" */
+/* Estilos del boton "Inscríbete" */
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(purple[500]),
   width: "144px",
@@ -30,17 +27,19 @@ const ColorButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export default function Login(props) {
-
+export default function Registro(props) {
   const navigate = useNavigate();
 
-  const [usuario, setusurio] = useState({
+  const [usuario, setusuario] = useState({
     email: "",
     pasword: "",
+    nombre: "",
+    institucion: "",
+    rol: "estudiante",
   });
 
   const handleChange = (e) => {
-    setusurio({
+    setusuario({
       ...usuario,
       [e.target.name]: e.target.value,
     });
@@ -54,16 +53,7 @@ export default function Login(props) {
   const comprobar = () => {
     console.log(usuario);
     //Antes de entrar deberia comprobar el usuario y determinar a donde debe navegar
-
-    //datos que se resiven por la api res
-    props.sesion(data);
-    if(data===null){ 
-        window.alert("Datos incorrectos");
-    }//Se inicia sesion con credenciales erroneas
-    else{
-        props.setSesionIniciada(true);
-        navigateToStudentView();
-    }//Se inicia sesion con credenciales correctas
+    navigateToStudentView();
   };
 
   function navigateToStudentView() {
@@ -77,8 +67,42 @@ export default function Login(props) {
   return (
     <div data-aos="fade-down" data-aos-once="true">
       <div className="formulario">
-        <h1 className="login_title">Inicia sesión</h1>
-        <form onSubmit={handleSubmit}>
+        <h1 className="registro_title">Inscríbete</h1>
+        <form  onSubmit={handleSubmit}>
+          <p>Nombre</p>
+          <input
+            type="text"
+            name="nombre"
+            value={usuario.nombre}
+            onChange={handleChange}
+            required
+          ></input>
+          <p>Institucion Educativa</p>
+          <input
+            type="text"
+            name="institucion"
+            value={usuario.institucion}
+            onChange={handleChange}
+            required
+          ></input>
+          <p>Rol</p>
+          <input
+            className="radio_input"
+            type="radio"
+            id="estudiante"
+            name="rol"
+            value="estudiante"
+            onChange={handleChange}
+            checked />
+          <label htmlFor="estudiante">Estudiante</label>
+          <input
+            className="radio_input"
+            type="radio"
+            id="docente"
+            name="rol"
+            value="docente"
+            onChange={handleChange} />
+          <label htmlFor="docente">Docente</label>
           <p>Email</p>
           <input
             type="email"
@@ -96,18 +120,18 @@ export default function Login(props) {
             required
           ></input>
           <p className="crear">
-            ¿No has creado una cuenta?
+            ¿Ya tienes una cuenta?
             <Link
-              to="/registro"
+              to="/login"
               underline="hover"
               component={RouterLink}
               sx={{ fontFamily: ["Sarabun", "sans-serif"].join(",") }}
             >
-              regístrate aquí
+              inicia sesión
             </Link>
           </p>
           <ColorButton variant="contained" type="submit">
-            Entrar
+            Inscríbete
           </ColorButton>
         </form>
       </div>
