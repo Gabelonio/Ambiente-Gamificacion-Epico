@@ -14,22 +14,22 @@ import PerfilEst from "./vistas/estudiante/PerfilEst";
 import ClasesEst from "./vistas/estudiante/ClasesEst";
 import Registro from "./vistas/registro/Registro";
 
-const pages = ['Saber Mas', 'Preguntas'];
+//const pages = ['Saber Mas', 'Preguntas'];
 
 function App() {
 
   const [usuario, setUsuario] = React.useState(null);
 
+  const [sesionIniciada, setSesionIniciada] = React.useState(false);
+
   const sesion= (persona)=> {
     setUsuario(persona)
-    pages.push(persona[0].tipo)
+    //pages.push(persona[0].tipo)
   }
-
-  const [sesionIniciada, setSesionIniciada] = React.useState(false);
 
   return (
     <BrowserRouter>
-      <NavBar sesionIniciada = {sesionIniciada} usuario={usuario} pages={pages}/>
+      <NavBar sesionIniciada = {sesionIniciada} usuario = {usuario} setSesionIniciada = {setSesionIniciada} /* pages={pages} *//>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Testimonios" element={<Testimonios />} />

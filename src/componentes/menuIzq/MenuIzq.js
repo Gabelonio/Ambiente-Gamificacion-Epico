@@ -48,7 +48,7 @@ export default function MenuIzq({ opciones, usuario }) {
           })}
         </div>
       </div>
-
+{/* 
       <div className="menu_despl_izq">
         <div className="desplegar" onClick={animation}>
           <i className="fa-solid fa-bars"></i>
@@ -76,7 +76,7 @@ export default function MenuIzq({ opciones, usuario }) {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
