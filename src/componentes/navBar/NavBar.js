@@ -43,9 +43,9 @@ const theme = createTheme({
 
 export default function NavBar({sesionIniciada, usuario, setSesionIniciada}) {
   const opciones = [
-    { nombre: "Mi cuenta", funcion: loadFunctionNavigateUsuario("MiCuenta") },
-    { nombre: "Clases", funcion: loadFunctionNavigateUsuario("Clases") },
-    { nombre: "Misiones Pendientes", funcion: loadFunctionNavigateUsuario("MisionesPendientes") },
+    { nombre: "Mi cuenta", funcion:()=>{loadFunctionNavigateUsuario("Micuenta")} },
+    { nombre: "Clases", funcion: ()=>{loadFunctionNavigateUsuario("Clases")}},
+    { nombre: "Misiones Pendientes", funcion: ()=>{loadFunctionNavigateUsuario("MisionesPendientes")}},
     { nombre: "Cerrar Sesion", funcion: logOut }
   ];
 
@@ -78,9 +78,12 @@ export default function NavBar({sesionIniciada, usuario, setSesionIniciada}) {
   }
 
   function loadFunctionNavigateUsuario(opcion){
-    return () => {
-        navigate(usuario[0].tipo + "/" + opcion);
-    };
+    const op = document.querySelectorAll(".opciones");
+    op.forEach((item) => {
+      item.classList.remove("activa");
+    });
+    document.getElementById(opcion).classList.add("activa")
+    navigate(usuario[0].tipo + "/" + opcion);
   }
 
   function logOut(){

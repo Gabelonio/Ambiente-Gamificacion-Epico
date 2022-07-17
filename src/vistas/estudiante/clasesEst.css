@@ -10,12 +10,17 @@
 
 }
 
+.resumenClases{
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .misClases{
 
 
     border-radius: 15px;
     border: 2px solid rgb(120, 189, 133);
-    width: 73.4vw;
+    width: 45vw;
     margin: 5px;
     padding: 10px;
 
@@ -26,15 +31,9 @@
 
 @media (max-width: 904px) {
     .misClases{
-
-
-        border-radius: 15px;
-        width: 73.4vw;
+        width: 100%;
         margin: 1px;
         padding: 5px;
-    
-        display: flex;
-        flex-flow: row wrap;
     
     }
 }
