@@ -15,11 +15,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-<<<<<<< HEAD
-=======
 const pagesVistaCompleta = [{nombre : 'Saber Mas', enlace : 'SaberMas'}, {nombre : 'Preguntas', enlace : 'Preguntas'}];
 const pagesVistaReducida = [...pagesVistaCompleta, {nombre : 'Inicia Sesion', enlace : 'login'}, {nombre : 'Inscribete', enlace : 'registro'}];
->>>>>>> db7496243fc968afc1c1bdd81aaab7db5347837a
 
 const theme = createTheme({
   palette: {
@@ -57,33 +54,10 @@ export default function NavBar({usuario,pages}) {
         navigate('/login');
     }
 
-<<<<<<< HEAD
-    function sesion(){
-
-        if(usuario===null){
-            return(
-                <ThemeProvider theme={theme}>
-                    <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(','),
-                                marginRight: "1em" }} variant="contained" color = "login"
-                            onClick = {navigateToLogin}>
-                        Inicia sesión
-                    </Button>
-                    <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(',')}} variant="contained" color = "signup">
-                        Inscríbete
-                    </Button>
-                </ThemeProvider>
-            )
-        }
-
-    }
-
-    
-=======
     function navigateToSignup(){
         navigate('/registro');
     }
 
->>>>>>> db7496243fc968afc1c1bdd81aaab7db5347837a
     return(
         <div>
             <AppBar position="relative"  sx={{backgroundColor : "#7db952"}}>
@@ -187,10 +161,6 @@ export default function NavBar({usuario,pages}) {
                             )} )}
                         </Box>{/* Barra de Navegacion en vista completa */}
 
-<<<<<<< HEAD
-                        <Box sx={{flexGrow: 0}}>
-                            {sesion()}
-=======
                         <Box sx={{flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
                             <ThemeProvider theme={theme}>
                                 <Button sx={{fontFamily: ['Maven Pro', 'cursive'].join(','),
@@ -207,7 +177,6 @@ export default function NavBar({usuario,pages}) {
                                     Inscríbete
                                 </Button>
                             </ThemeProvider>
->>>>>>> db7496243fc968afc1c1bdd81aaab7db5347837a
                         </Box>
                     </Toolbar>
                 </Container>
