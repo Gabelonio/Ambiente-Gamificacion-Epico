@@ -2,17 +2,42 @@
     {
         "nombre":"Matematicas 1",
         "profesor":"Nombre profesor",
-        "id":"id de la clase"
+        "id":"1",
+        "personaje":"mago",
+        "vida":"20",
+        "experiencia":"80",
+        "nivel":4,
+        "habilidades": 1
 
     },
     {
         "nombre":"Ingles 1",
         "profesor":"Nombre profesor",
-        "id":"id de la clase"
+        "id":"2",
+        "personaje":"elfo",
+        "vida":"80",
+        "experiencia":"10",
+        "nivel":2,
+        "habilidades": 2
     },
     {
         "nombre":"Biologia 1",
         "profesor":"Nombre profesor",
-        "id":"id de la clase"
+        "id":"3",
+        "personaje":"piromante",
+        "vida":"100",
+        "experiencia":"0",
+        "nivel":1,
+        "habilidades": 3
+    },
+    {
+        "nombre":"Fisica 1",
+        "profesor":"Nombre profesor",
+        "id":"4",
+        "personaje":"caballero",
+        "vida":"10",
+        "experiencia":"90",
+        "nivel":6,
+        "habilidades": 0
     }
 ]

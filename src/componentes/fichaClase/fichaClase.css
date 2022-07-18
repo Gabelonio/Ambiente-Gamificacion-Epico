@@ -17,6 +17,11 @@
 
 }
 
+.fichaClase:hover{
+    transition: .4s ease all;
+    box-shadow:  6px 6px  3px  rgb(176, 176, 176);
+}
+
 
 .nombre_clase{
     display: flex;
