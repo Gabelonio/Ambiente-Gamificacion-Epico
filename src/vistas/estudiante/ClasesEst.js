@@ -13,7 +13,7 @@ export default function ClasesEst(props){
                <hr></hr>
                <div className='resumenClases'>     
                     <div className="misClases">
-                         {data.map(item => { return <FichaClase key={item} clase={item}/>})}
+                         {data.map(item => { return <FichaClase key={item.id} clase={item}/>})}
                     </div>
                     <ResmPersonaje/>
                </div>
