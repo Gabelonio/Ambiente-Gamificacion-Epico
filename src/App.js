@@ -3,7 +3,6 @@ import * as React from "react";
 import NavBar from "./componentes/navBar/NavBar";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Testimonios from "./vistas/Testimonios";
 import Preguntas from "./vistas/preguntas/Preguntas";
 import Home from "./vistas/home/Home";
 import SaberMas from "./vistas/saberMas/SaberMas";
@@ -30,19 +29,20 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar sesionIniciada = {sesionIniciada} usuario = {usuario} setSesionIniciada = {setSesionIniciada} /* pages={pages} *//>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Testimonios" element={<Testimonios />} />
-        <Route path="/Preguntas" element={<Preguntas />} />
-        <Route path="/SaberMas" element={<SaberMas />} />
-        <Route path="/login"  element={<Login sesion={sesion} setSesionIniciada = {setSesionIniciada}/>} />
-        <Route path="/registro" element={<Registro setSesionIniciada = {setSesionIniciada}/>} />
-        <Route  path='/Estudiante/*'    element={<Estudiante  data={usuario} />}>
-          <Route path="Micuenta" element={<PerfilEst />} />
-          <Route path="Clases" element={<ClasesEst />} />
-        </Route>
-        <Route path="*" element={<h1> pagina no encontrada</h1>} />
-      </Routes>
+      <div className = "mainContenido">
+        <Routes >
+          <Route path="/" element={<Home />} />
+          <Route path="/Preguntas" element={<Preguntas />} />
+          <Route path="/SaberMas" element={<SaberMas />} />
+          <Route path="/login"  element={<Login sesion={sesion} setSesionIniciada = {setSesionIniciada}/>} />
+          <Route path="/registro" element={<Registro setSesionIniciada = {setSesionIniciada}/>} />
+          <Route  path='/Estudiante/*' element={<Estudiante  data={usuario} />}>
+            <Route path="Micuenta" element={<PerfilEst />} />
+            <Route path="Clases" element={<ClasesEst />} />
+          </Route>
+          <Route path="*" element={<h1> pagina no encontrada</h1>} />
+        </Routes>
+      </div>
       <footer>
         <Footer1 />
       </footer>
