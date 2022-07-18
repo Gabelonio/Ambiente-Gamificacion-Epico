@@ -31,6 +31,7 @@ h1{
     flex-flow: row wrap;
 }
 
+
 @media (max-width: 904px) {
     .misClases{
         width: 100%;

@@ -157,10 +157,5 @@
     .contenedor_menu{
         display:none !important;
     }
-    .menu_despl_izq{
-        display:flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
     
 }
