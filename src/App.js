@@ -23,7 +23,6 @@ function App() {
 
   const sesion= (persona)=> {
     setUsuario(persona)
-    //pages.push(persona[0].tipo)
   }
 
   return (
@@ -42,7 +41,7 @@ function App() {
         <Route path="*" element={<h1> pagina no encontrada</h1>} />
       </Routes>
       <footer>
-        <Footer1 />
+        <Footer1/>
       </footer>
     </BrowserRouter>
   );
