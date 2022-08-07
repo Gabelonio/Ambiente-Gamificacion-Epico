@@ -1,0 +1,42 @@
+.conteneder_actividad{
+    position: absolute;
+    width : 16px;
+    height: 16px;
+    color: gold;
+    background-color: rgba(112, 253, 41, 0.511);
+    border:3px dotted black;
+    border-top: 1px solid black;
+    border-radius:50%;
+    padding:0px;
+    margin:0px;
+    transition: .5s ease all;
+}
+
+.conteneder_actividad:hover{
+    padding: 4px;
+    color: rgba(60, 60, 216, 0.913);
+}
+
+.conteneder_actividad:hover .resumen_actividad{
+    display: block;
+    
+}
+
+.resumen_actividad:hover{
+    display: block;
+}
+
+.resumen_actividad{
+    position: relative;
+    color: black;
+    left: 20px;
+    bottom: 15px;
+    display: none;
+    width: 150px;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    background-color: rgba(75, 214, 77, 0.708);
+
+    padding: 10px;
+
+}

@@ -1,0 +1,64 @@
+[
+    
+    {
+        "id":"1",
+        "x":"160",
+        "y":"200",
+        "nombre":"Actividad 1",
+        "descripcion":"responder la siguente pregunta para poder continuar con t camino",
+        "vida":"-10",
+        "experiencia":"10",
+        "activa":"true",
+        "requisito":"0",
+        "tipo":"Preguntas",
+        "cantidad":"3",
+        "pregunta":{
+            "1":"posible 1",
+            "2":"posible 2",
+            "3":"posible 3",
+            "respuesta":"posible 1"
+        }        
+        
+    },
+    {
+        "id":"2",
+        "x":"100",
+        "y":"400",
+        "nombre":"Actividad 2",
+        "descripcion":"responder la siguente pregunta para poder continuar con t camino",
+        "vida":"-10",
+        "experiencia":"10",
+        "activa":"true",
+        "requisito":"1",
+        "tipo":"preguntas",
+        "cantidad":"3",
+        "pregunta":{
+            "1":"posible 1",
+            "2":"posible 2",
+            "3":"posible 3",
+            "respuesta":"posible 1"
+        }        
+        
+    },
+    {
+        "id":"3",
+        "x":"600",
+        "y":"300",
+        "nombre":"Actividad 3",
+        "descripcion":"responder la siguente pregunta para poder continuar con t camino",
+        "vida":"-10",
+        "experiencia":"10",
+        "activa":"true",
+        "requisito":"2",
+        "tipo":"preguntas",
+        "cantidad":"3",
+        "pregunta":{
+            "1":"posible 1",
+            "2":"posible 2",
+            "3":"posible 3",
+            "respuesta":"posible 1"
+        }        
+        
+    }
+
+]
