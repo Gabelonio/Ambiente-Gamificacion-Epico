@@ -35,7 +35,7 @@ function App() {
         <Route path="/SaberMas" element={<SaberMas />} />
         <Route path="/login"  element={<Login sesion={sesion} setSesionIniciada = {setSesionIniciada}/>} />
         <Route path="/registro" element={<Registro setSesionIniciada = {setSesionIniciada}/>} />
-        <Route path="Entrar/:idClass" element={<Clase data={usuario}/>}/>
+        <Route path="Clase/:idClass" element={<Clase usuario={usuario}/>}/>
         <Route  path='/Estudiante/*'    element={<Estudiante  data={usuario} />}>
           <Route path="Micuenta" element={<PerfilEst />} />
           <Route path="Clases" element={<ClasesEst />}/>

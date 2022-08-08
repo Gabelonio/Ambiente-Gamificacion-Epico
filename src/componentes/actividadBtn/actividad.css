@@ -1,20 +1,23 @@
 .conteneder_actividad{
     position: absolute;
-    width : 16px;
-    height: 16px;
-    color: gold;
-    background-color: rgba(112, 253, 41, 0.511);
-    border:3px dotted black;
+    width : 31px;
+    height: 31px;
+    color: rgb(57, 199, 18);
+    background-color: rgba(0, 0, 0);
+    border:3px dotted rgba(0, 0, 0, 0.769);
     border-top: 1px solid black;
     border-radius:50%;
     padding:0px;
     margin:0px;
     transition: .5s ease all;
 }
+.conteneder_actividad .icono{
+    font-size:30px;
+}
 
 .conteneder_actividad:hover{
     padding: 4px;
-    color: rgba(60, 60, 216, 0.913);
+    color: rgb(41, 207, 207);
 }
 
 .conteneder_actividad:hover .resumen_actividad{
@@ -32,11 +35,46 @@
     left: 20px;
     bottom: 15px;
     display: none;
-    width: 150px;
+    width: 400px;
     border: 1.5px solid black;
     border-radius: 20px;
-    background-color: rgba(75, 214, 77, 0.708);
+    background-color: rgba(234, 250, 231, 0.824);
 
     padding: 10px;
 
+}
+
+.resumen_actividad .nombre{
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+}
+
+.resumen_actividad .vida i{
+    color: rgb(209, 49, 49);
+    margin-left: 20px;
+    
+}
+
+.resumen_actividad .exp i{
+    color: rgb(174, 174, 46);
+    margin-left: 20px;
+    
+}
+
+.resumen_actividad button{
+    margin: auto;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    border: 1px solid white;
+    transition: .3s ease all;
+}
+
+.resumen_actividad button:hover{
+    background-color: rgb(20, 255, 177);
+    border: 1px solid rgb(0, 0, 0);
 }
