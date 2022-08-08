@@ -13,6 +13,7 @@ import PerfilEst from "./vistas/estudiante/PerfilEst";
 import ClasesEst from "./vistas/estudiante/ClasesEst";
 import Registro from "./vistas/registro/Registro";
 import Clase  from "./vistas/estudiante/Clase";
+import Actividad from "./vistas/estudiante/Actividad";
 
 
 
@@ -35,7 +36,8 @@ function App() {
         <Route path="/SaberMas" element={<SaberMas />} />
         <Route path="/login"  element={<Login sesion={sesion} setSesionIniciada = {setSesionIniciada}/>} />
         <Route path="/registro" element={<Registro setSesionIniciada = {setSesionIniciada}/>} />
-        <Route path="Clase/:idClass" element={<Clase usuario={usuario}/>}/>
+        <Route path="/Clase/:idClass" element={<Clase usuario={usuario}/>}/>
+        <Route path="/Clase/Actividad/:idClass/:idAct" element={<Actividad usuarioo={usuario}/>}/>
         <Route  path='/Estudiante/*'    element={<Estudiante  data={usuario} />}>
           <Route path="Micuenta" element={<PerfilEst />} />
           <Route path="Clases" element={<ClasesEst />}/>

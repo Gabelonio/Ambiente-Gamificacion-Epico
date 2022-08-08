@@ -2,20 +2,30 @@
     position: absolute;
     width : 31px;
     height: 31px;
+    padding:0px;
+    margin:0px;
+    transition: .3s ease all;
+}
+
+.contenedor_icono{
+    position: absolute;
+    width : 31px;
+    height: 31px;
+    padding:0px;
+    margin:0px;
     color: rgb(57, 199, 18);
     background-color: rgba(0, 0, 0);
     border:3px dotted rgba(0, 0, 0, 0.769);
     border-top: 1px solid black;
     border-radius:50%;
-    padding:0px;
-    margin:0px;
     transition: .5s ease all;
 }
+
 .conteneder_actividad .icono{
     font-size:30px;
 }
 
-.conteneder_actividad:hover{
+.conteneder_actividad:hover .contenedor_icono{
     padding: 4px;
     color: rgb(41, 207, 207);
 }
@@ -32,15 +42,15 @@
 .resumen_actividad{
     position: relative;
     color: black;
-    left: 20px;
-    bottom: 15px;
+    left: 40px;
+    bottom: 1px;
     display: none;
     width: 400px;
     border: 1.5px solid black;
     border-radius: 20px;
     background-color: rgba(234, 250, 231, 0.824);
-
     padding: 10px;
+    transition: .3s ease all;
 
 }
 
