@@ -6,12 +6,30 @@ const Pregunta = (props) => {
 
 
   return (
-    <div>
-        <p>{actividad.nombre}</p>
-        <p>{actividad.pregunta.pregunta}</p>
-        <p>{actividad.pregunta.primera}</p>
-        <p>{actividad.pregunta.segunda}</p>
-        <p>{actividad.pregunta.tercera}</p>
+    <div className='actividad_pregunta'>
+        <p className='pregunta_nombre'>{actividad.nombre}</p>
+        <p className='pregunta_pregunta'>{actividad.pregunta.pregunta}</p>
+
+        <div className='pregunta_info vencimiento'>Vencimiento: {actividad.vencimiento}</div>
+        <div className='pregunta_info recompensa'>Recompensa: {actividad.experiencia} XP</div>
+        <div className='pregunta_info castigo'>Castigo: {actividad.vida}</div>
+
+
+        <hr></hr>
+        <br></br>
+        <input type="checkbox" id="primera" name="primera" value={actividad.pregunta.primera} />
+        <label  for="primera"> {actividad.pregunta.primera}</label><br></br>
+        
+        <input type="checkbox" id="segunda" name="segunda" value={actividad.pregunta.segunda} />
+        <label  for="segunda"> {actividad.pregunta.segunda}</label><br></br>
+
+        <input type="checkbox" id="tercera" name="tercera" value={actividad.pregunta.tercera} />
+        <label  for="tercera"> {actividad.pregunta.tercera}</label><br></br>
+
+        <button className='pregunta_entregar'>Entregar</button>
+        
+        
+
     </div>
   )
 }

@@ -1,0 +1,55 @@
+.actividad_pregunta{
+
+    padding: 10px;
+    width: 70vw;
+    padding-left: 40px;
+    padding-right: 30px;
+    margin: 10px;
+    border: 2px solid #A5BA8F;
+    border-radius: 10px;
+}
+
+.actividad_pregunta .pregunta_nombre{
+    font-size: 40px;
+    color: #202020;
+}
+.actividad_pregunta .pregunta_pregunta{
+    font-size: 20px;
+    color: #202020;
+}
+
+.actividad_pregunta .pregunta_info{
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 20px;
+
+}
+.actividad_pregunta .vencimiento{
+    background-color: rgb(122, 162, 255);
+}
+.actividad_pregunta .recompensa{
+    background-color: rgb(122, 255, 122);
+}
+.actividad_pregunta .castigo{
+    background-color: rgb(255, 122, 122);
+}
+
+
+
+.actividad_pregunta .pregunta_entregar{
+    margin-top: 30px;
+    padding: 5px;
+    border-radius: 3px;
+    background: #9a5353;
+    color: white;
+    border: 1px solid black;
+    transition: .3s ease all;
+}
+.actividad_pregunta .pregunta_entregar:hover{
+    background: #be9f9f;
+    color: #202020;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 4px dotted rgb(83, 83, 83);
+}
