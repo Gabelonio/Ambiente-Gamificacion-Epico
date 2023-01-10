@@ -1,3 +1,7 @@
+<h1>Proyecto Ambiente de Gamificacion Epico</h1>
+El siguiente repositorio ha sido creado con la finalidad de gestionar los cambios y avances del proyecto de investigación Ambiente de Gamificación Épico (FrontEnd) - VIRTUS UD.
+#
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
